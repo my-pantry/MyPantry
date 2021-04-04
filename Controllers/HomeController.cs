@@ -38,6 +38,18 @@ namespace MyPantry.Controllers
             return View();
         }
 
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
+        public IActionResult GroceryItem()
+        {
+            var groceryItem = new GroceryItem() {Id = 1, Name = "Flour", PurchaseDate = DateTime.Now.ToString("dd.MM.yyyy"), ExpirationDate = "05/01/2021", Quantity = 1, Barcode = "10101000100010"};
+            ViewData["groceryItem"] = groceryItem;
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

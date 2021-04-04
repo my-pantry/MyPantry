@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Grocery Item";
+    GroceryItem item = (GroceryItem)ViewData["groceryItem"];
+}
+<h1>Grocery Item</h1>
+<p> Id: @item.Id </p>
+<p> Name: @item.Name </p>
+<p> Quantity: @item.Quantity </p>
+<p> Barcode: @item.Barcode </p>
+<p> Purchase Date: @item.PurchaseDate </p>
+<p> Expiration Date: @item.ExpirationDate </p>

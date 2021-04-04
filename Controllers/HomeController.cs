@@ -27,6 +27,16 @@ namespace MyPantry.Controllers
         {
             return View();
         }
+        public IActionResult Dashboard() 
+        {
+            return View();
+        }
+
+        public IActionResult Person() {
+            var person = new Person() {Id = 1, FirstName = "Donelle", LastName = "Harris", Email = "DonelleHarris@Somewhere.com", Password = "password"};
+            ViewData["person"] = person;
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
